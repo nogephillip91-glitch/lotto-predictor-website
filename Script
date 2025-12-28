@@ -1,0 +1,21 @@
+function predict() {
+  const resultsDiv = document.getElementById("results");
+  resultsDiv.innerHTML = "";
+
+  const baseNumbers = [1,3,7,8,11,13,16,18,21,24,27,30,33];
+  let predictions = [];
+
+  while (predictions.length < 10) {
+    const n = baseNumbers[Math.floor(Math.random() * baseNumbers.length)];
+    if (!predictions.includes(n)) predictions.push(n);
+  }
+
+  predictions.sort((a,b) => a-b);
+
+  predictions.forEach(n => {
+    const span = document.createElement("span");
+    span.className = "number";
+    span.textContent = n;
+    resultsDiv.appendChild(span);
+  });
+}
