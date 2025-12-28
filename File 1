@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lotto Predictor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Lotto Predictor</h1>
+
+  <select id="game">
+    <option value="SA">South Africa Daily Lotto</option>
+    <option value="RU">Russia Gosloto 5/36</option>
+  </select>
+
+  <button onclick="predict()">Generate 10 Numbers</button>
+
+  <div id="results"></div>
+
+  <p class="disclaimer">
+    Disclaimer: Predictions are for entertainment purposes only.
+  </p>
+
+  <script src="script.js"></script>
+</body>
+</html>
